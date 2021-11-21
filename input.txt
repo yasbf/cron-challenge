@@ -1,0 +1,13 @@
+30 1 /bin/run_me_daily
+45 * /bin/run_me_hourly
+* * /bin/run_me_every_minute
+* 19 /bin/run_me_sixty_times
+0 0 /bin/midnight
+00 23 /bin/twentythree
+15 * test
+165 * /bin/multi_minutes
++ 26 /bin/multi_hours
+
+* /bin/incomplete_start
+12 /bin/incomplete_int
+30 12

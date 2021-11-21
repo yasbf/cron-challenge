@@ -26,7 +26,7 @@ For example given the above examples as input and the simulated 'current time' c
 
 `19:00 today - /bin/run_me_sixty_times`
 
-## Assumptions
+## Developed features
 
 1. This script will be part of a production environment, hence the production files (requirements, jenkins etc)
 2. While a simple script could have done the same thing I want to show how I would develop in normal practice (robust, simple and clear code)
@@ -36,10 +36,13 @@ For example given the above examples as input and the simulated 'current time' c
 
 ## Running
 
-From the top level directory (cron-admin) __main__ is in the nextrun directory:
+From the top level directory (cron-challenge)
+```
+cat input.txt | <how to run your solution> <simulated current time>
+```
 
 ### Arguments
--t time in HH:MM format [required]
+Time in HH:MM format [Not required]
 
 -p path to cron file to parse [optional]
 

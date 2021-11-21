@@ -28,14 +28,25 @@ For example given the above examples as input and the simulated 'current time' c
 
 ## Developed features
 
-1. This script will be part of a production environment, hence the production files (requirements, jenkins etc)
-2. While a simple script could have done the same thing I want to show how I would develop in normal practice (robust, simple and clear code)
-3. Parsing of cron files / data was separated from other logic for flexibility / extendability
-4. Tests were written within a reasonable timescale but are not complete
-5. Further error / boundary checking should be added to the tests / code where reqd
+1. Script will silently ignore hour > 24 and minute > 60 and keep going.
+2. If script launched with Log arguments ==> Show error message in these two cases
+3. if line is empty and not last line, script will silently ignore it.
+4. if line is missing one argument, script will silently ignore it.
+5. If script launched with Log arguments ==> Show error message with missing argument
+6. script will use current time if argument "simulated time" is missing.
+7. scrip will silently ignore other in-line arguments.
+
+## Next features
+
+1. Add proper argument order handling
+2. Add possibility to pass input.txt as an argument
+   e.g: pyhton minicron.py -c input.txt
+3. Use Exception instead of print 
+4. Better use of functions and global variables for reusability
 
 ## Running
 
+script requires Python3
 From the top level directory (cron-challenge)
 ```
 cat input.txt | python3 minicron.py

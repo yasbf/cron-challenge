@@ -38,17 +38,15 @@ For example given the above examples as input and the simulated 'current time' c
 
 From the top level directory (cron-challenge)
 ```
-cat input.txt | <how to run your solution> <simulated current time>
+cat input.txt | python3 minicron.py
+cat input.txt | python3 minicron.py 16:10
+cat input.txt | python3 minicron.py Log
+cat input.txt | python3 minicron.py 16:10 Log
 ```
 
 ### Arguments
-Time in HH:MM format [Not required]
+Script file name [required]
 
--p path to cron file to parse [optional]
+Time in HH:MM format [optional]
 
--s cron data string to parse [optional or required if no path is specified]
-
-### examples:
-`python nextrun -t 16:10 -p test/crontab.txt`
-
-`python nextrun -t 16:10 -s "30 1 /bin/run_me_daily \n 45 * /bin/run_me_hourly \n * * /bin/run_me_every_minute \n * 19 /bin/run_me_sixty_times"`
+Log: show some extras logs [optional]

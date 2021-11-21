@@ -33,7 +33,7 @@ For example given the above examples as input and the simulated 'current time' c
 3. if line is empty and not last line, script will silently ignore it.
 4. if line is missing one argument, script will silently ignore it.
 5. If script launched with Log arguments ==> Show error message with missing argument
-6. script will use current time if argument "simulated time" is missing.
+6. script will use current time if argument "args_now_time" is missing.
 7. scrip will silently ignore other in-line arguments.
 
 ## Next features
